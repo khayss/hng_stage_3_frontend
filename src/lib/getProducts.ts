@@ -1,4 +1,4 @@
-const baseUrl = `${process.env.NEXTAUTH_URL}/api/products`;
+const baseUrl = "/api/products";
 
 export default async function getProducts() {
   const res = await fetch(baseUrl);
