@@ -1,10 +1,9 @@
 "use client";
 
 import Button from "@/components/Buttons/Button";
-import  ProductCard  from "@/components/Cards/ProductCard";
+import ProductCard from "@/components/Cards/ProductCard";
 import { type Product } from "@/interfaces/Product";
 import { formatNumberWithCommas } from "@/lib/formatNumberWithCommas";
-import { getProductById } from "@/lib/getProducts";
 import { Favorite, HalfStar, Like } from "@/svgs/Icons";
 import Image from "next/image";
 import { useParams } from "next/navigation";
@@ -17,8 +16,9 @@ export default function Product() {
 
   useEffect(() => {
     const getProduct = async (id: string) => {
-      const product = await getProductById(id);
-      setProduct(product);
+      const res = await fetch("/api/products/" + id);
+      const data = await res.json();
+      setProduct(data);
     };
     getProduct(Array.isArray(id) ? id[0] : id);
   }, [id]);
@@ -138,10 +138,10 @@ export default function Product() {
               <small className="text-small text-gray">Total Price</small>
               <h4 className="text-lg font-medium">{`₦ ${formatNumberWithCommas(
                 Array.isArray(product?.current_price)
-                ? product.current_price[0]?.["NGN"]?.[0]
-                : typeof product?.current_price === "number"
-                ? product.current_price
-                : 0
+                  ? product.current_price[0]?.["NGN"]?.[0]
+                  : typeof product?.current_price === "number"
+                  ? product.current_price
+                  : 0
               )}`}</h4>
             </div>
             <div className="w-full flex justify-between items-center gap-16 md:justify-end">

@@ -6,7 +6,8 @@ import Image from "next/image";
 import brands from "@/data/brands.json";
 import { Product } from "@/interfaces/Product";
 import ProductCard from "@/components/Cards/ProductCard";
-import getProducts from "@/lib/getProducts";
+import { getProducts } from "./api/api";
+
 
 export default async function Home() {
   const data: GetProductResponse = await getProducts();

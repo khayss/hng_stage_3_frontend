@@ -4,10 +4,10 @@ export async function GET(
   request: Request,
   { params }: { params: { id: string } }
 ) {
-  const res = await fetch(`${baseUrl}/${params.id}?${query}`, {
-    method: "GET",
-    credentials: "include",
-  });
+  const url = `${baseUrl}/${params.id}?${query}`;
+
+  const res = await fetch(url, { method: "GET", credentials: "include" });
+
   const data = await res.json();
 
   return Response.json(data);

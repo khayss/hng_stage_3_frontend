@@ -2,7 +2,8 @@ import Button from "@/components/Buttons/Button";
 import ProductCard from "@/components/Cards/ProductCard";
 import ProductNavbar from "@/components/ProductNavBar/ProductNavBar";
 import { GetProductResponse } from "@/interfaces/GetProductResponse";
-import getProducts from "@/lib/getProducts";
+import { getProducts } from "../api/api";
+
 
 export default async function Products() {
   const data: GetProductResponse = await getProducts();
