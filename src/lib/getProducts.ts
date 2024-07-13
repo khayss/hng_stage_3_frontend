@@ -1,4 +1,14 @@
-const baseUrl = "/api/products";
+const getBaseUrl = () => {
+  if (typeof window !== "undefined") {
+    return "";
+  } else {
+    return process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "http://localhost:3000";
+  }
+};
+
+const baseUrl = `${getBaseUrl()}/api/products`;
 
 export default async function getProducts() {
   const res = await fetch(baseUrl);
