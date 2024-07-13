@@ -1,0 +1,32 @@
+[
+    {
+      "name": "Reebok",
+      "logo": "/images/logos/reebok.svg"
+    },
+    {
+      "name": "Nike",
+      "logo": "/images/logos/nike.svg"
+    },
+    {
+      "name": "Adidas",
+      "logo": "/images/logos/adidas.svg"
+    },
+    {
+      "name": "Jordans",
+      "logo": "/images/logos/jordans.svg"
+    },
+    {
+      "name": "Puma",
+      "logo": "/images/logos/puma.svg"
+    },
+  
+    {
+      "name": "New Balance",
+      "logo": "/images/logos/newbalance.svg"
+    },
+    {
+      "name": "Balenciaga",
+      "logo": "/images/logos/balenciaga.svg"
+    }
+  ]
+  

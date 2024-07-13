@@ -1,0 +1,15 @@
+{
+  "sizes": [32, 35, 38, 39, 40, 42, 45],
+  "colors": ["#FFA500", "#9747FF", "#09C53B", "#FFCD00", "#EC064F", "#141B34"],
+  "rating": 4.5,
+  "amountSold": 100,
+  "color": {
+    "text": "black",
+    "color": "#000000"
+  },
+  "brand": "Brand",
+  "size": 39,
+  "description": "The Ego Vessel is the perfect addition to your casual wardrobe. Pair them with jeans, joggers, or even a dress for an effortlessly cool look that's sure to make a statement. Whether you're running errands or hitting the town, these versatile sneakers will keep you feeling and looking your best.",
+  "numReviews": 32,
+  "discountPercentage": 0
+}
